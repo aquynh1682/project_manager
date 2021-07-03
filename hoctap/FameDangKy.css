@@ -1,0 +1,148 @@
+.feature {
+    width: 350px;
+    height: 800px;
+    margin: auto;
+    /* margin-top: 5%; */
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#label {
+    color: red;
+}
+
+.feature h1 {
+    position: relative;
+    margin: 40px 0 30px;
+    padding-bottom: 12px;
+    width: fit-content;
+    font-size: 25px;
+}
+
+.feature h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: var(--bg2);
+    bottom: 0;
+}
+
+.feature h4 {
+    position: relative;
+    padding-top: 19px;
+    width: fit-content;
+    font-size: 15px;
+}
+
+.feature button {
+    width: 100%;
+    height: 40px;
+    border: 2px solid var(--bg2);
+    margin-top: 30px;
+    cursor: pointer;
+    background: linear-gradient(40deg, var(--bg1), var(--bg2));
+    color: rgb(0, 0, 0);
+    transition: 0.7s;
+    position: relative;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    background-size: 700px;
+}
+
+.feature button:hover {
+    background-position: right;
+    color: rgb(255, 255, 255);
+}
+
+.feature a {
+    color: rgb(0, 0, 0);
+}
+
+.feature form {
+    width: 100%;
+    height: 100%;
+}
+
+.form-field {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form-field input {
+    width: 100%;
+    height: 45px;
+    padding-left: 30px;
+    border: none;
+    border-bottom: 2px solid var(--bg2);
+    outline: none;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background: transparent;
+}
+
+.form-field input::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.form-field i {
+    position: absolute;
+    font-size: 20px;
+    line-height: 45px;
+    color: rgb(0, 0, 0);
+}
+
+.form-field span {
+    margin-left: 50px0;
+}
+
+#repassword {
+    color: red;
+}
+
+.field {
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.form-sex {
+    float: auto;
+}
+
+.form-sex input {
+    margin-top: 5px;
+    margin-left: 43px;
+}
+
+.form-sex label {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.register {
+    width: 10000px;
+    height: 40px;
+    border: 2px solid var(--bg2);
+    margin-top: 30px;
+    cursor: pointer;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+input:focus:invalid {
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535;
+}
+
+input:focus:valid {
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+.has-error {
+    color: red;
+}

@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ trợ học tập - đào tạo nhân tài quốc gia</title>
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <!-- start library -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/78d7fc013c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800,900&amp;display=swap">
+
+    <link rel="stylesheet" href="FameDangKy.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comment.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800,900&amp;display=swap">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+    <!-- end library -->
+</head>
+<body>
+    <!-- start menu -->
+    <div>
+        <div id="container">
+            <div id="header">
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.php">
+                            <img src="anh/logo1.png" url="index.php" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="nav">
+            <div class="container">
+                <div class="menu">
+                    <ul class="root">
+                        <li><a href="index.php">Trang Chủ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="be-comment-block ">
+                <div id="test">
+                </div>
+                <hr>
+                <form class="form-block">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group fl_icon">
+                                <div class="icon"><i class="fa fa-user"></i></div>
+                                <input class="form-input  form-control" id="UserName" type="text" placeholder="Your name">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 fl_icon">
+                            <div class="form-group fl_icon">
+                                <div class="icon"><i class="fa fa-envelope-o"></i></div>
+                                <input class="form-input form-control" id="Email" type="text" placeholder="Your email">
+                            </div>
+                        </div>
+                        <div class="col-xs-12">									
+                            <div class="form-group">
+                                <textarea class="form-input" required="" id="content" placeholder="Your text"></textarea>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary pull-right" id="btnSubmit">submit</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="contact" class="container-fluid bg-grey" style="background: dimgray; color: snow; position:absolute; width: 100%;">
+            <h2 class="text-center"></h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>Liên hệ với chúng tôi và chúng tôi sẽ liên hệ lại với bạn trong vòng 24 giờ.</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span>Phenikaa University, Yên Nghĩa - Hà Đông - Hà Nội.</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> +84 942 187 996</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> HoTro@k12htht.xyz</p>
+                </div>
+                <div class="col-sm-7 slideanim">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" name="UserName" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" name="Email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment"
+                        rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right"  type="submit" ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end menu -->
+    <script type="text/javascript">
+    pos = $("#nav").position();
+    $(window).scroll(function() {
+        var posScroll = $(Document).scrollTop();
+        if (parseInt(posScroll) > parseInt(pos.top)) {
+            $("#nav").addClass('fixed');
+        } else {
+            $("#nav").removeClass('fixed');
+        }
+    });
+    $("#re-password").change(function() {
+        var p = $("#password").val();
+        if ($(this).val() != p) {
+            $("#repassword").text("Nhập lại mật khẩu không chính xác mời bạn nhập lại");
+        } else {
+            $("#repassword").text("");
+        }
+    });
+    function checkEmail(email) {
+        $("#testEmail").removeClass().addClass('msgboxcheck').text('Checking...').fadeIn("slow");
+        $.post('check_email.php', {
+            'email': email
+        }, function(data) {
+            if (data == "true") {
+                $("#testEmail").text("Email đã tồn tại mời bạn nhập lại!!!");
+            } else {
+                $("#testEmail").text("");
+            }
+        });
+    }
+    function checkName(userName) {
+        $("#testUser").removeClass().addClass('msgboxcheck').text('Checking...').fadeIn("slow");
+        $.post('check_username.php', {
+            'userName': userName
+        }, function(data) {
+            $("#testUser").html(data);
+        });
+    }
+    $('#btnSubmit').on('click',function(){
+        let UserName = $('#UserName').val().trim();
+        let email = $('#Email').val().trim();
+        let content = $('#content').val().trim();
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+        if(email.length == 0 || UserName.length == 0 || content.length == 0){
+            alert("Bạn chưa điền đầy đủ thông tin mời bạn nhập lại");
+            return;
+        }else{
+            $('#remove').remove();
+            $.ajax({
+                url:'updateXml.php',
+                type:'post',
+                data:{
+                    name:UserName,
+                    email:email,
+                    content:content,
+                    dateTime:dateTime,
+                },
+                success:function(data){
+                }
+            })
+        }
+        ReadData();
+    });
+    window.load = ReadData();
+    function ReadData(){
+        $.ajax({
+            url:'comment.php',
+            type:'get',
+            data:{
+            },
+            success:function(data){
+                console.log(data);
+                $('#test').append(data);
+            }
+        })
+    }
+    </script>
+</body>
+</html>

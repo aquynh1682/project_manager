@@ -1,0 +1,101 @@
+/*viet noi dung vao day */
+
+#feature {
+    width: 100%;
+}
+
+#feature .container {
+    margin: 1% auto;
+    min-height: 300px;
+}
+
+#feature .container .feature-left {
+    margin-left: 2%;
+}
+
+@media screen and (max-width:2000px) {
+    #feature .container .feature-left .card {
+        width: 320px;
+        height: 260px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+        float: left;
+        padding: 20px 30px;
+        position: relative;
+        display: block;
+        background: linear-gradient(40deg, #fbfafb, #7b8084);
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        background-size: 900px;
+        transition: 0.7s;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #feature .container .feature-left .card {
+        width: 180px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #feature .container .feature-left .card {
+        width: 130px;
+        height: 220px;
+    }
+}
+
+#feature .container .feature-left div:hover {
+    background-position: right;
+}
+
+#feature .container .feature-left .card .icon {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+#feature .container .feature-left .card .font a {
+    line-height: 28px;
+    margin-top: 10px;
+    margin-left: auto;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#feature .container .feature-left .card .font .font-title a {
+    font-size: 20px;
+    color: #233e62;
+}
+
+#feature .container .feature-left .card p {
+    line-height: 28px;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+
+#feature .container .feature-left .card::after {
+    content: "";
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-color: transparent #f6f6f6 transparent transparent;
+}
+
+h2.feature-title {
+    color: #233e62;
+    font-weight: 800px;
+    font-size: 32px;
+}
+
+
+/* end noi dung */

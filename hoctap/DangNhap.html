@@ -1,0 +1,147 @@
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Hỗ trợ học tập - đào tạo nhân tài quốc gia</title>
+     <!-- <script src="jquery-3.6.0.min.js"></script> -->
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+     <script src="https://kit.fontawesome.com/78d7fc013c.js" crossorigin="anonymous"></script>
+
+     <!-- <link rel="stylesheet" href="class/styleclassdangnhap.css"> -->
+     <link rel="stylesheet" href="FameLogin.css">
+     <link rel="stylesheet" href="style.css">
+
+     <script src="https://code.jquery.com/jquery-2.2.4.js"
+         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet"
+         href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800,900&amp;display=swap">
+
+     <script src="https://code.jquery.com/jquery-3.6.0.js"
+         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+     <!-- Optional theme -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+         integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+     <!-- Latest compiled and minified JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+     </script>
+ </head>
+
+ <body>
+
+     <div id="container">
+         <div id="header">
+             <div class="container">
+                 <div class="logo">
+                     <!--
+                        <a href="index.html">K12</p></a>
+                        -->
+                     <a href="index.php">
+                         <img src="anh/logo1.png" url="index.php" alt="">
+                     </a>
+                 </div>
+
+             </div>
+         </div>
+     </div>
+     <nav id="nav">
+         <div class="container">
+             <div class="menu">
+                 <ul class="root">
+                     <li><a href="index.php">Trang Chủ</a></li>
+                     <li><a href="dangnhap.html">Đăng Nhập</a></li>
+                     <li><a href="dangky.html">Đăng Ký</a></li>
+                 </ul>
+             </div>
+         </div>
+     </nav>
+
+
+     <!-- Start Menu -->
+
+
+     <div id="about" class="container-fluid">
+         <div class="row justify-content-center">
+             <form class="form" action="login.php" method="POST" id="loginForm">
+                 <div class="feature">
+                     <h1>Đăng Nhập</h1>
+                     <div class="has-error">
+                         <span id="label"></span>
+                     </div>
+                     <div class="form-field">
+                         <i class="fa fa-user"></i>
+                         <input type="text" placeholder="Username" id="userName" name="userName">
+
+                     </div>
+                     <div class="form-field">
+                         <i class="fas fa-lock"></i>
+                         <input type="password" placeholder="password" id="password" name="password">
+                     </div>
+                     <button id="btn">Đăng Nhập</button>
+                     <h4>chưa có tài khoản thì nhấn vào: <a href="dangky.html">đây</a></h4>
+                 </div>
+             </form>
+         </div>
+     </div>
+     <!------------------------------------->
+
+     <div id="contact" class="container-fluid bg-grey" style="background: dimgray; color: snow; bottom:0px; position:absolute; width: 100%;">
+         <h2 class="text-center"></h2>
+         <div class="row">
+             <div class="col-sm-5">
+                 <p>Liên hệ với chúng tôi và chúng tôi sẽ liên hệ lại với bạn trong vòng 24 giờ.</p>
+                 <p><span class="glyphicon glyphicon-map-marker"></span>Phenikaa University, Yên Nghĩa - Hà Đông - Hà
+                     Nội.</p>
+                 <p><span class="glyphicon glyphicon-phone"></span> +84 942 187 996</p>
+                 <p><span class="glyphicon glyphicon-envelope"></span> HoTro@k12htht.xyz</p>
+             </div>
+             <div class="col-sm-7 slideanim">
+                 <div class="row">
+                     <div class="col-sm-6 form-group">
+                         <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                     </div>
+                     <div class="col-sm-6 form-group">
+                         <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                     </div>
+                 </div>
+                 <textarea class="form-control" id="comments" name="comments" placeholder="Comment"
+                     rows="5"></textarea><br>
+                 <div class="row">
+                     <div class="col-sm-12 form-group">
+                         <button class="btn btn-default pull-right" type="submit">Send</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <script>
+     //lay vi tri hien tai cua menu cach top x px
+     pos = $("#nav").position();
+
+     $(window).scroll(function() {
+         var posScroll = $(Document).scrollTop();
+         if (parseInt(posScroll) > parseInt(pos.top)) {
+             $("#nav").addClass('fixed');
+         } else {
+             $("#nav").removeClass('fixed');
+         }
+     });
+     </script>
+ </body>
+
+ </html>

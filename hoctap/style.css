@@ -1,0 +1,586 @@
+:root {
+    --bg1: #fbfafb;
+    --bg2: #7b8084;
+    --text: #26ade4;
+}
+
+html,
+body {
+    font-family: sans-serif;
+    width: 100%;
+}
+
+#container {
+    max-width: 100%;
+}
+
+#header .container {
+    width: 1140px;
+    margin: 0px auto;
+    height: 50px;
+}
+
+#header .container .logo {
+    float: left;
+    margin-left: 5px;
+}
+
+#header .container .logo img {
+    height: 50px;
+    width: auto;
+    line-height: 50px;
+    float: left;
+}
+
+#header .container .form-search {
+    width: 500px;
+    float: right;
+    position: relative;
+    margin-right: 60px;
+}
+
+@media screen and (max-width:2000px) {
+    #header .container .form-search {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width:1140px) {
+    #header .container .form-search {
+        width: 500px;
+        float: right;
+        margin-right: 300px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #header .container .form-search {
+        width: 500px;
+        float: left;
+        /* margin-right: 400px; */
+    }
+}
+
+#header .container .form-search .keyword {
+    width: 80%;
+    font-size: 16px;
+    border: 1px solid #999;
+    height: 40px;
+    margin-top: 5px;
+    text-indent: 15px;
+    border-radius: 10px;
+    color: rgba(32, 30, 30, 0.7);
+    /* background: transparent; */
+}
+
+#header .container .form-search .btn-search {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    background: transparent;
+}
+
+@media screen and (max-width:2000px) {
+    #header .container .form-search .btn-search {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #999;
+        position: absolute;
+        top: 5px;
+        right: 50px;
+        background: transparent;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #header .container .form-search .btn-search {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #999;
+        position: absolute;
+        top: 5px;
+        right: 50px;
+        background: transparent;
+    }
+}
+
+#header .container .form-search .btn-search img {
+    font-size: 26px;
+    color: #999;
+    cursor: pointer;
+}
+
+
+/*---------*/
+
+#nav {
+    width: 100%;
+    background: #233e62;
+    height: 50px;
+}
+
+#nav .container {
+    width: 1140px;
+    margin: 0px auto;
+}
+
+#nav .container .menu {
+    height: 50px;
+    margin-top: -10px;
+}
+
+#nav .container .menu ul.root>li {
+    list-style-type: none;
+    float: left;
+    position: relative;
+    border-radius: 1px solid rgb(165 183 218)
+}
+
+#nav .container .menu ul.root>li>a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: initial;
+    color: white;
+    padding: 0px 10px 0px 10px;
+    /* border: 1px solid white; */
+    line-height: 50px;
+    display: block;
+}
+
+#nav .container .menu ul.root>li>a:hover {
+    background: burlywood;
+    color: #233e62;
+    transition: ease-in 0.20s;
+    -moz-transition: ease-in 0.20s;
+    -webkit-transition: ease-in 0.20s;
+}
+
+#nav .container .logo {
+    /* width: 20%; */
+    float: left;
+    /* margin-left: 5px; */
+}
+
+#nav .container .logo img {
+    height: 50px;
+    width: auto;
+    line-height: 50px;
+    float: left;
+    margin-right: 100px;
+}
+
+#nav .container .menu ul.root li:first-child a {
+    /* color: wheat; */
+    font-size: 24px;
+}
+
+#nav .form-search {
+    width: 300px;
+    float: right;
+    position: relative;
+}
+
+@media screen and (max-width:2000px) {
+    #nav .form-search {
+        width: 300px;
+        float: right;
+        position: relative;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #nav .form-search {
+        width: 150px;
+        float: right;
+        position: relative;
+    }
+}
+
+#nav .form-search .keyword {
+    width: 90%;
+    font-size: 16px;
+    border: 1px solid #999;
+    height: 40px;
+    margin-top: 5px;
+    text-indent: 15px;
+    border-radius: 20px;
+    color: rgba(32, 30, 30, 0.7);
+    /* background: transparent; */
+}
+
+#nav .form-search .btn-search {
+    width: 25px;
+    height: 25px;
+    border: none;
+    position: absolute;
+    top: 12px;
+    right: 50px;
+    background: transparent;
+}
+
+@media screen and (max-width:2000px) {
+    #nav .form-search .btn-search {
+        width: 25px;
+        height: 25px;
+        border: none;
+        position: absolute;
+        top: 12px;
+        right: 50px;
+        background: transparent;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #nav .form-search .btn-search {
+        width: 25px;
+        height: 25px;
+        border: none;
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        background: transparent;
+        margin-right: 25px;
+    }
+}
+
+#nav .form-search .btn-search img {
+    font-size: 26px;
+    color: #999;
+    cursor: pointer;
+}
+
+div#clock {
+    float: left;
+    font-size: 16px;
+    color: antiquewhite;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.banner {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 600px;
+}
+
+
+/* thu nho khung anh banner */
+
+@media screen and (max-width:2000px) {
+    .banner img {
+        width: 100%;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .banner img {
+        width: 600px;
+        height: 450px;
+    }
+}
+
+.fixed {
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+}
+
+
+/*----------------------------*/
+
+
+/* phần footer và menu */
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+}
+
+.logo {
+    color: #f4511e;
+    font-size: 200px;
+}
+
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+
+.item span {
+    font-style: normal;
+}
+
+.panel {
+    border: 1px solid #f4511e;
+    border-radius: 0 !important;
+    transition: box-shadow 0.5s;
+}
+
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+}
+
+.panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+}
+
+.panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.panel-footer {
+    background-color: white !important;
+}
+
+.panel-footer h3 {
+    font-size: 32px;
+}
+
+.panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+}
+
+.slideanim {
+    visibility: initial;
+}
+
+.slide {
+    /* animation-name: slide; */
+    /* -webkit-animation-name: slide; */
+    /* animation-duration: 1s; */
+    /* -webkit-animation-duration: 1s; */
+    visibility: inherit;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+}
+
+
+/*-----------------------*/
+
+
+/* sytyele-noidung.css */
+
+
+/*viet noi dung vao day */
+
+#feature {
+    width: 100%;
+}
+
+#feature .container {
+    margin: 1% auto;
+    min-height: 300px;
+}
+
+#feature .container .feature-left {
+    margin-left: 2%;
+}
+
+@media screen and (max-width:2000px) {
+    #feature .container .feature-left .card {
+        width: 320px;
+        height: 260px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+        float: left;
+        padding: 20px 30px;
+        position: relative;
+        display: block;
+        background: linear-gradient(40deg, #fbfafb, #7b8084);
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        background-size: 900px;
+        transition: 0.7s;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #feature .container .feature-left .card {
+        width: 180px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #feature .container .feature-left .card {
+        width: 130px;
+        height: 220px;
+    }
+}
+
+#feature .container .feature-left div:hover {
+    background-position: right;
+}
+
+#feature .container .feature-left .card .icon {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+#feature .container .feature-left .card .font a {
+    line-height: 28px;
+    margin-top: 10px;
+    margin-left: auto;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#feature .container .feature-left .card .font .font-title a {
+    font-size: 20px;
+    color: #233e62;
+}
+
+#feature .container .feature-left .card p {
+    line-height: 28px;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+
+#feature .container .feature-left .card::after {
+    content: "";
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-color: transparent #f6f6f6 transparent transparent;
+}
+/* end noi dung */

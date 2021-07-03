@@ -1,0 +1,171 @@
+<!-- <?php
+    include 'connect.php';
+    session_start();
+    $user = (isset($_SESSION['user'])) ? $_SESSION['user']: [];
+     //$user = $_SESSION['user'];
+?>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ trợ học tập - đào tạo nhân tài quốc gia</title>
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800,900&amp;display=swap">
+
+    <link rel="stylesheet" href="styleclass.css">
+    <link rel="stylesheet" href="../style-noidung.css">
+    <!-- <style>
+        @media screen and (max-width: 800px) {
+            #header,
+            #nav,
+            #banner,
+            #feature,
+            #footer {
+                width: 100%;
+            }
+            }
+    </style> -->
+
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="container">
+                <div class="logo">
+                    <!--
+                        <a href="index.html">K12</p></a>
+                        -->
+                    <a href="../index.php">
+                        <img src="../anh/logo1.png" url="../index.php" alt="">
+                    </a>
+                </div>
+                <!-- <div class="contac-info">
+
+                    <ul>
+                        <li>
+                            <div class="contac-icon">
+                                <img src="../anh/bay.png" alt="">
+                            </div>
+
+                            <div class="contac-text">
+                                <label>Email</label>
+                                <pan>Youremail@gmail.com</pan>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="contac-icon">
+                                <img src="../anh/call.png" alt="">
+                            </div>
+
+                            <div class="contac-text">
+                                <label>Call</label>
+                                <pan>0942 187 996</pan>
+                            </div>
+                        </li>
+
+                    </ul> -->
+
+            </div>
+            <!-- <marquee id="marq" scrollamount="3" direction="left" loop="50" scrolldelay="0" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()"> Thông báo : Chào mừng đến với thiên đường trắc nghiệm </marquee>  -->
+            <!-- <marquee behavior="alternate">Thông báo : Chào mừng đến với thiên đường trắc nghiệm k12htht.xyz </marquee> -->
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+
+    <nav id="nav">
+        <div class="container">
+            <div class="menu">
+                <ul class="root">
+                    <li><a href="../index.php">Trang Chủ</a> <a>/</a> <a href="english.html">Tiếng Anh</a></li>
+                    <!-- <?php if(isset($user['name'])){?>
+                                <li><a href="#">Chào: <?php echo $user['name'] ?></a></li>
+                                <?php if(isset($user['access'])){?>
+                                    <?php if($user['access']==0) {?>
+                                        <li><a href="update.php">Đăng Bài</a></li>
+                                    <?php }?>
+                                <?php } ?>
+                                <li><a href="logout.php">Đăng Xuất</a></li>
+                            <?php }else { ?>
+                                <li><a href="DangNhap.html">Đăng Nhập</a></li>
+                                <li><a href="dangky.html">Đăng Ký</a></li>
+                            <?php } ?> -->
+
+                </ul>
+                <div class="form-search">
+                    <input type="text" class="keyword" placeholder="Search..." />
+                    <button type="submit" class="btn-search">
+                            <img src="../anh/search.png" alt="">
+                        </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="banner">
+        <img src="" alt="">
+    </div>
+    </div>
+    <!------------------------------------->
+
+
+    <div id="footer">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.php">k12htht.xyz</a>
+                <h3>Website thi và tạo đề thi trắc nghiệm online. Mang đến người dùng các chức năng tốt nhất cho việc học tập và giảng dậy.</h3>
+            </div>
+            <h2>Liên Hệ</h2>
+            <div class="contac-info">
+                <!-- <a href="#">Liên hệ</a> -->
+
+                <ul>
+                    <li>
+                        <div class="contac-icon">
+                            <img src="../anh/mail.png" alt="">
+                        </div>
+
+                        <div class="contac-text">
+                            <label>Email</label>
+                            <pan class="text">Youremail@gmail.com</pan>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="contac-icon">
+                            <img src="../anh/call.png" alt="">
+                        </div>
+
+                        <div class="contac-text">
+                            <label>Call</label>
+                            <pan class="text">0942 187 996</pan>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //lay vi tri hien tai cua menu cach top x px
+        pos = $("#nav").position();
+
+        $(window).scroll(function() {
+            var posScroll = $(Document).scrollTop();
+            if (parseInt(posScroll) > parseInt(pos.top)) {
+                $("#nav").addClass('fixed');
+            } else {
+                $("#nav").removeClass('fixed');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,387 @@
+:root {
+    --bg1: #db99f5;
+    --bg2: #79bdeb;
+    --text: #26ade4;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.container {
+    max-width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 80px;
+}
+
+#header .container {
+    width: 1140px;
+    margin: 0px auto;
+    height: 80px;
+}
+
+#header .container .logo {
+    width: 20%;
+    float: left;
+    margin-left: 10px;
+}
+
+#header .container .logo img {
+    height: 80px;
+    width: auto;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+    display: block;
+    line-height: 80px;
+    float: left;
+}
+
+#header .container .contac-info {
+    float: left;
+    width: 490px;
+    height: 60px;
+    margin-left: -10%;
+}
+
+@media screen and (max-width:2000px) {
+    #header .container .contac-info {
+        width: 490px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #header .container .contac-info {
+        width: 190px;
+        height: auto;
+    }
+}
+
+#header .container .contac-info ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+#header .container .contac-info ul li {
+    display: inline-block;
+    height: 60px;
+    margin-left: 55px;
+}
+
+#header .container .contac-info ul li .contac-icon {
+    float: left;
+    height: 80px;
+    width: 35px;
+    line-height: 60px;
+}
+
+#header .container .contac-info ul li .contac-text {
+    float: left;
+    height: 60px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#header .container .contac-info ul li .contac-text label {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#container #header .container marquee#marq {
+    float: left;
+    /* background-color: #db99f5; */
+    color: #233e62;
+}
+
+#container #header .container marquee[behavior="alternate"] {
+    float: left;
+    /* background-color: #db99f5; */
+    /* color: #233e62; */
+    border: 1px Solid #db99f5;
+}
+
+#nav {
+    width: 100%;
+    background: #051155;
+    height: 50px;
+}
+
+#nav .container {
+    width: 1140px;
+    margin: 0px auto;
+}
+
+#nav .container .menu {
+    height: 50px;
+    margin: 0px auto;
+}
+
+#nav .container .menu ul li {
+    list-style-type: none;
+    float: left;
+    position: relative;
+}
+
+#nav .container .menu ul li a {
+    text-decoration: none;
+    float: left;
+    color: white;
+    padding: 0px 15px 0px 15px;
+    line-height: 50px;
+    display: block;
+}
+
+#nav .container .menu ul li a:hover {
+    /* background: burlywood;
+    color: #233e62; */
+    transition: ease-in 0.20s;
+    -moz-transition: ease-in 0.20s;
+    -webkit-transition: ease-in 0.20s;
+}
+
+#nav .container .menu ul li:first-child a {
+    /* color: wheat; */
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    padding-top: 5px;
+}
+
+
+/*--------------------------*/
+
+.main .left {
+    width: 25%;
+    /* border: 1px solid #333; */
+    border-radius: 5px;
+    background-color: #fff;
+    height: 540px;
+    padding: 10px;
+}
+
+.main .center {
+    width: 50%;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #fcf8e3;
+    /* height: 590px; */
+    padding: 10px;
+}
+
+.main .right {
+    margin-right: 0px;
+    width: 25%;
+    /* border: 1px solid #333; */
+    border-radius: 5px;
+    background-color: #fff;
+    height: 540px;
+    padding: 10px;
+    float: right;
+}
+
+.main .right h3 {
+    text-align: center;
+}
+
+.main .right ul>li {
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #26ade4;
+    position: relative;
+}
+
+.main .right ul>li>a {
+    margin-top: 10px;
+    display: block;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.main .right ul>li>a:hover {
+    color: #3e0909;
+    background: burlywood;
+    transition: ease-in 0.20s;
+    -moz-transition: ease-in 0.20s;
+    -webkit-transition: ease-in 0.20s;
+}
+
+
+/*-------------------------*/
+
+#footer {
+    bottom: 0;
+    float: left;
+    width: 100%;
+    /* height: 200px; */
+    background: #0d1128;
+    position: absolute;
+}
+
+#footer .footer {
+    width: 100%;
+    margin: 0px auto;
+    height: 80px;
+}
+
+#footer .footer-left {
+    float: left;
+}
+
+#footer .container {
+    width: 1140px;
+    margin: 0px auto;
+    height: 80px;
+}
+
+#footer .container .logo {
+    width: 200px;
+    float: left;
+    color: #f0f9fd;
+    margin-left: 20px;
+}
+
+#footer .container .logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800px;
+    color: #f0f9fd;
+    display: block;
+    line-height: 50px;
+}
+
+#footer .container .logo h3 {
+    font-size: 12px;
+    color: #f0f9fd;
+}
+
+#footer .container .contac-info {
+    float: left;
+    width: 590px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width:2000px) {
+    #footer .container .contac-info {
+        width: 590px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #footer .container .contac-info {
+        width: 290px;
+        height: auto;
+        margin-left: -30px;
+    }
+}
+
+#footer .container .contac-info a {
+    margin-left: 60px;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800px;
+    color: #f0f9fd;
+    display: block;
+    line-height: 80px;
+}
+
+
+/* #footer .container h2 {
+    margin-left: 60px;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800px;
+    color: #f0f9fd;
+    display: block;
+    line-height: 80px;
+} */
+
+@media screen and (max-width:2000px) {
+    #footer .container h2 {
+        margin-left: 30%;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 800px;
+        color: #f0f9fd;
+        display: block;
+        line-height: 80px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #footer .container h2 {
+        margin-left: 40%;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 800px;
+        color: #f0f9fd;
+        display: block;
+        line-height: 80px;
+    }
+}
+
+#footer .container .contac-info ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    float: left;
+}
+
+#footer .container .contac-info ul li {
+    display: inline-block;
+    height: 40px;
+    margin-left: 55px;
+}
+
+#footer .container .contac-info ul li .contac-icon {
+    float: left;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+}
+
+#footer .container .contac-info ul li .contac-text {
+    color: #f0f9fd;
+    float: left;
+    height: 60px;
+}
+
+#footer .container .contac-info ul li .contac-text .text {
+    color: #f0f9fd;
+}
+
+#footer .container .contac-info ul li .contac-text label {
+    color: #233e62;
+    float: left;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-left: 0px;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+}
