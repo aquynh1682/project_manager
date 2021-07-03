@@ -5,6 +5,8 @@
     // mysqli_set_charset($conn,"utf8");
     // include('connect.php');
     // test
+    // test
+    // test
     $fire = mysqli_query($conn, "select * from comment");
     $xml = new XMLWriter();
     $xml -> openURI("php://output");
