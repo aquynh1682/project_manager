@@ -1,4 +1,4 @@
-<?php require_once("../test/database.php"); ?>
+<?php require_once("class/database.php"); ?>
 
 
     <!-- <?php
@@ -12,6 +12,7 @@
     <html lang="en">
 
     <head>
+    <link rel="icon" href="anh/logo1,1.png" image="image/x-icon">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,9 +55,6 @@
             <div id="header">
                 <div class="container">
                     <div class="logo">
-                        <!--
-                        <a href="index.html">K12</p></a>
-                        -->
                         <a href="index.php">
                             <img src="anh/logo1.png" url="index.php" alt="">
                         </a>
@@ -81,7 +79,6 @@
             <div class="left"></div>
             <div class="center">
 
-               
                     <form method="POST" id="comment_form">
                         <div class="form-group">
                             <input type="text" name="comment_name" id="comment_name" class="form-control"
@@ -99,29 +96,10 @@
                     <span id="comment_message"></span>
                     <br />
                     <div id="display_comment"></div>
-               
 
             </div>
-            <!-- <div class="right">
-            <h3>Môn Học</h3>
-            <ul>
-                <li><a href="math.php">Toán Học</a></li>
-                <li><a href="vatly.php">Vật Lý</a></li>
-                <li><a href="dialy.php">Địa Lý</a></li>
-                <li><a href="english.php">Tiếng Anh</a></li>
-                <li><a href="tonghop.php">Tổng Hợp</a></li>
-                <li><a href="khoahocxahoi.php">Khoa Học Xã Hội</a></li>
-                <li><a href="sinhhoc.php">Sinh Học</a></li>
-                <li><a href="history.php">Lịch Sử</a></li>
-                <li><a href="hoahoc.php">Hóa Học</a></li>
-
-            </ul>
-        </div> -->
 
         </div>
-        <!------------------------------------->
-
-
         <div id="contact" class="container-fluid bg-grey"
             style="background: dimgray; color: snow;  position:absolute; width: 100%;">
             <h2 class="text-center">CONTACT</h2>

@@ -1,4 +1,4 @@
-<?php require_once("../test/database.php"); ?>
+<!-- <?php require_once("../test/database.php"); ?> -->
 
 
 <!-- <?php

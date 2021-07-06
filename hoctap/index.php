@@ -74,7 +74,7 @@
                         <?php } ?>
                         <li> <a href="goiY.html">GÓP Ý</a> </li>
 
-                        <li> <a href="class/new.php">TIN TỨC</a> </li>
+                        <li> <a href="news.php">TIN TỨC</a> </li>
                         <li> <a href="QA.php">Q&A</a> </li>
                         <li> <a href="help.html">HƯỚNG DẪN</a> </li>
 
