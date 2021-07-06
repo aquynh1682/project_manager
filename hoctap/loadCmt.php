@@ -1,12 +1,6 @@
 <?php
     $conn = mysqli_connect('localhost', 'olirenwm_htht', '123456a@', 'olirenwm_htht');
-    // default_charset = "utf-8";
     mysqli_set_charset($conn, 'utf8');
-    // mysqli_set_charset($conn,"utf8");
-    // include('connect.php');
-    // test
-    // test
-    // test
     $fire = mysqli_query($conn, "select * from comment");
     $xml = new XMLWriter();
     $xml -> openURI("php://output");
@@ -30,7 +24,6 @@
                 $xml -> startElement('dateTime');
                 $xml -> writeRaw($row['dateTime']);
                 $xml -> endElement();
-
             $xml -> endElement();
         }
     $xml -> endElement();

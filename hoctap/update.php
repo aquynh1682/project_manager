@@ -23,6 +23,7 @@
 			z-index: 1000;
 			background: white;
 			width: 320px;
+			/* height: 400px; */
 			border: 15px;
 			cursor: pointer;
 			overflow-y: auto;
@@ -277,8 +278,45 @@
 			}
 		});
 	}
+	$(document).ready(function(){
+		$(document).click(function(event){
+			var search = event.target.id;
+			if(search == "liveSearch" || search == "" || search == "btnQuestion" || search == "pagination"){
+				return;
+			}else if(search == "btnSearch"){
+				$('#txtSearch').val('');
+				$('#liveSearch').hide();
+			}else{
+				console.log(search);
+				var text = document.getElementById(search).innerHTML;
+				// document.getElementById("txtSearch").innerHTML = text;
+				$('#txtSearch').val(text);
+				readData(text);
+				$('#liveSearch').hide();
+			}
+		});
+		$(document).mouseover(function(event) {
+			var search = event.target.id;
+			if(search == "liveSearch" || search == "" || search == "btnQuestion" || search == "pagination" || search == "btnSearch" || search == "txtSearch"){
+				return;
+			}
+			else{
+				document.getElementById(search).style.color = "blue";
+			}
+		})
+		$(document).mouseout(function(event) {
+			var search = event.target.id;
+			if(search == "liveSearch" || search == "" || search == "btnQuestion" || search == "pagination" || search == "btnSearch" || search == "txtSearch"){
+				return;
+			}
+			else{
+				document.getElementById(search).style.color = "black";
+			}
+		})
+	});
 
 	function showSearch(str) {
+		$('#liveSearch').show();
 		if (str.length == 0) {
 			document.getElementById("liveSearch").innerHTML = "";
 			document.getElementById("liveSearch").style.border = "0px";
@@ -295,5 +333,9 @@
 			xmlhttp.open("GET", "search.php?q=" + str, true);
 			xmlhttp.send();
 		}
+	}
+
+	window.load = function test(){
+		$('#liveSearch').hide();
 	}
 </script>

@@ -4,6 +4,7 @@
 
     $x=$xmlDoc->getElementsByTagName('questions');
     $q=$_GET["q"];
+    $id = 1;
     //lookup all links from the xml file if length of q>0
     if (strlen($q)>0) {
         $hint="";
@@ -13,9 +14,9 @@
             //find a link matching the search text
                 if (stristr($y->item(0)->childNodes->item(0)->nodeValue,$q)) {
                     if ($hint=="") {
-                        $hint="<a target='_blank' style='margin-left:5px' onmouseover ='onmouse(this.value)' >" .$y->item(0)->childNodes->item(0)->nodeValue."</a>";
+                        $hint='<a target="_blank" id="search'.($id++).'"  style="margin-left:5px; color:black" >' .$y->item(0)->childNodes->item(0)->nodeValue.'</a>';
                     } else {
-                        $hint=$hint."<br /><a target='_blank' onmouseover ='onmouse(this.value)' style='margin-top:10px; margin-left:5px'>" .$y->item(0)->childNodes->item(0)->nodeValue."</a>"; 
+                        $hint=$hint.'<br/><a target="_blank" id="search'.($id++).'" style="margin-left:5px; color:black" >' .$y->item(0)->childNodes->item(0)->nodeValue.'</a>';
                     }
                 }
             }
