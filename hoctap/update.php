@@ -12,7 +12,7 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+	<link rel="shortcut icon" href="./news/assets/images/21.png" />
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- end library -->
@@ -281,7 +281,7 @@
 	$(document).ready(function(){
 		$(document).click(function(event){
 			var search = event.target.id;
-			if(search == "liveSearch" || search == "" || search == "btnQuestion" || search == "pagination"){
+			if(search == "liveSearch" || search == "" || search == "btnQuestion" || search == "pagination" || search == "btnClose"){
 				return;
 			}else if(search == "btnSearch"){
 				$('#txtSearch').val('');

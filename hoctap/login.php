@@ -12,11 +12,7 @@
             $checkPass = password_verify($password, $data['password']);
             if($checkPass){
                 $_SESSION['user'] = $data;
-                // echo $data['id'];
                 header('location: index.php');
-                // $user = (isset($_SESSION['user'])) ? $_SESSION['user']: [];
-                // var_dump($user['name']);
-                // var_dump($data['id']);
             }
             else{
                 var_dump("Tài khoản hoặc mật khẩu không đúng mời bạn nhập lại");
