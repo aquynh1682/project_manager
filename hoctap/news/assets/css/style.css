@@ -10384,6 +10384,7 @@ header .navbar-bottom .navbar-toggler {
 .sticky {
   position: fixed;
   width: 100%;
+  heigh:100px;
   z-index: 99;
   top: 0;
   left: 0;
@@ -10394,7 +10395,8 @@ header .navbar-bottom .navbar-toggler {
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
-  padding: 24px;
+  padding-left: 40px;
+  padding-right: 30px
 }
 
 .navbar-close {

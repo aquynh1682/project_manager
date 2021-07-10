@@ -222,29 +222,27 @@
                             </div>
                         </li>
 
+						
 						<?php if(isset($user['fullName'])) { ?>
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $user['fullName'] ?></span>
+                                <?php if(isset($user['images'])){ ?>
+                                    <img class="img-profile rounded-circle"
+                                    src="./uploads/<?php echo $user['images'] ?>">
+                                    
+                                <?php }else{ ?>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
+                                <?php } ?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                <a class="dropdown-item" href="managerUser.php">
+                                    <i class="fa fa-tasks fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Quản lý tài khoản
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -267,7 +265,7 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800" id="manager">Quản lý bài viết</h1>
                     </div>
-                    <a href="#" data-toggle="modal" data-target="#mdprofile"><input type="button" id="btnAdd" class="btn btn-primary" value="Thêm bài viết"></a><br><br>
+                    <a href="#" data-toggle="modal" data-target="#addModal"><input type="button" id="btnAdd" class="btn btn-primary" value="Thêm bài viết"></a><br><br>
 		            <table class="table table-striped table-bordered table-hover">
 					<thead>
 						<tr>

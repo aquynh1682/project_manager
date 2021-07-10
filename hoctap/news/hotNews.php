@@ -52,7 +52,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+        #session{
+            display: none;
+        }
+    </style>
 
     <!-- endinject -->
     <title>K12News</title>

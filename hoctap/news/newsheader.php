@@ -6,7 +6,7 @@
 <header id="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light" style="height: 70px">
-            <div class="navbar-bottom">
+            <div class="navbar-bottom " style="height: 70px">
                 <div class="d-flex justify-content-between align-items-center">
                 <div>
                     <a class="navbar-brand" href="news.php" style="color:white; font-size: 30px;">K12News</a>
@@ -40,7 +40,10 @@
                                 
                             <?php 
                             }
-                            ?>
+                        ?>
+                        <li class="nav-item active">
+                        <a class="nav-link" href="../index.php">K12htht</a>
+                        </li>
                     </ul>
                 </div>
                 </div>
@@ -49,17 +52,24 @@
                             <div class="collapse navbar-collapse " id="navbarNavDropdown">
                                 <ul class="navbar-nav navbar-top-right-menu">
                                     <li class="nav-item dropdown ml-auto">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Chào: <?php echo $user['fullName']; ?>
+                                        <a class="nav-link dropdown-toggle" href="#" style="font-size:15px" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <?php echo $user['fullName'] ?>
+                                                <?php if(isset($user['images'])){ ?>
+                                                    <img class="img-profile rounded-circle" style="width: auto; height: 30px;"
+                                                    src="./uploads/<?php echo $user['images'] ?>">
+                                                    
+                                                <?php }else{ ?>
+                                                <img class="img-profile rounded-circle"
+                                                    src="img/undraw_profile.svg">
+                                                <?php } ?>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                         <?php if(isset($user['access'])) 
                                                 if($user['access'] != 1) { ?>
                                                     <a class="dropdown-item" href="upNews.php">Đăng bài</a>
-                                                    
                                                     <a class="dropdown-item" href="managerUser.php">Quản lý tài khoản</a>
                                         <?php } else if($user['access'] == 1) { ?>
-                                                <a class="dropdown-item" href="upNews.php">Quản lý tài khoản</a>
+                                                <a class="dropdown-item" href="managerUser.php">Quản lý tài khoản</a>
                                             <?php } ?>  
                                         <a class="dropdown-item" href="logout.php">Đăng xuất</a>
                                         </div>

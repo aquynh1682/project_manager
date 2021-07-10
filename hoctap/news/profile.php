@@ -8,8 +8,8 @@
             <form method="post">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                        <div class="profile-img px-0">
+                            <img src="./uploads/<?php echo $user['images']; ?>" class="img-fluid img-responsive" style="width: auto; height: 195px;" alt=""/>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -27,16 +27,6 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-md-2">
-                    <a class="profile-edit-btn" data-toggle="modal" data-target="#profile"><input type="submit" class="profile-edit-btn" name="btnAddMore" value="Sửa thông tin"/></a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        
-                    </div>
-                    <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row">
@@ -66,6 +56,14 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
+                                                <label>Địa chỉ</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><?php echo $user['address']; ?></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
@@ -82,6 +80,17 @@
                                         </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-md-2">
+                    <a class="profile-edit-btn" data-toggle="modal" data-target="#profile"><input type="submit" class="profile-edit-btn" name="btnAddMore" value="Sửa thông tin"/></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        
+                    </div>
+                    <div class="col-md-4">
+                       
                     </div>
                 </div>
             </form>           

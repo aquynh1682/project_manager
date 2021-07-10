@@ -97,6 +97,75 @@ class adminlib extends dblib {
 		
 		return $message;
 	}
+
+	function update_user($id) {
+		$error = array ();
+		$data = array ();
+		// Lấy dữ liệu
+		$data['fullName'] = isset($_POST['fullName']) ? $_POST['fullName'] : '';
+		$data['email'] = isset($_POST['email']) ? $_POST['email'] : '';
+		$data['address'] = isset($_POST['address']) ? $_POST['address'] : '';
+		$data['phone'] = isset($_POST['phone']) ? $_POST['phone'] : '';
+		$data['sex'] = isset($_POST['sex']) ? $_POST['sex'] : '';
+		
+		// Kiểm tra dữ liệ
+		// Code PHP upload file
+		if ($_FILES["fileToUpload"]["tmp_name"] != '') {
+			// Code PHP upload file
+			$target_dir = "./uploads/";
+			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+			$uploadOk = 1;
+			$imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+			
+			// Kiểm tra file có phải là hình hay giả mạo
+			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+			if ($check !== false) {
+				$uploadOk = 1;
+			}
+			else {
+				$error["images"] = "File không phải là hình.";
+				$uploadOk = 0;
+			}
+			
+			// kiểm tra kích thước file khi upload lên
+			if ($_FILES["fileToUpload"]["size"] > 500000) {
+				$error["images"] = "Lổi, kích thước file quá lớn";
+				$uploadOk = 0;
+			}
+			// Kiểm tra phần mở rộng của file
+			if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+				$error["images"] = "Lổi, chỉ cho phép file có phần mở rộng là JPG, JPEG, PNG & GIF.";
+				$uploadOk = 0;
+			}
+			
+			// Kiểm tra nếu $uploadOk là 0 có nghĩa đã có lổi và không upload được
+			if ($uploadOk != 0) {
+				if (!move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+					$error["images"] = "Xin lổi, đã xảy ra lổi trong khi upload file.";
+				}
+				else {
+					$data['images'] = basename($_FILES["fileToUpload"]["name"]);
+				}
+			}
+		}
+		
+		// nếu ok hết thì insert dữ liệu vào bảng posts
+		if (!$error) {
+			$this->update("user", $data, "id = $id");
+			$error["note"] = "Thêm bài viết thành công";
+			header('Location:managerUser.php');
+			die();
+		}
+		else {
+			$error["note"] = "Thêm bài viết thất bại";
+		}
+		
+		// Trả về $error để thông báo lổi nếu có
+		$message[0] = $error;
+		$message[1] = $data;
+		
+		return $message;
+	}
 	
 	
 	// Hàm update posts

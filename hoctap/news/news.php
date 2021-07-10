@@ -26,7 +26,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/vendors/mdi/css/materialdesignicons.min.css"/>
     <link rel="stylesheet" href="assets/vendors/aos/dist/aos.css/aos.css" />
-
+    <style>
+    </style>
     <!-- End plugin css for this page -->
     <link rel="shortcut icon" href="assets/images/21.png" />
 
@@ -34,6 +35,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="animation.css"/>
     <!-- endinject -->
     <title>K12News</title>
 </head>
@@ -43,11 +45,10 @@
             <!-- partial:partials/_navbar.html -->
             <?php include 'newsheader.php' ?>
             <header class="py-5 bg-light border-bottom mb-4">
-                <div class="container">
-                    <div class="text-center my-5">
-                        <h1 class="fw-bolder">Welcome to K12News!</h1>
-                        <p class="lead mb-0">Demo tin tức k12KHMT</p>
-                    </div>
+                <div class="container" style="text-align: center;">
+                    <p class="ex1">K12NEWS</p>
+                    <p class="ex2">Welcome to k12 NEWS channel</p>
+                    <p class="desc">- k12htht.xyz -</p>
                 </div>
             </header>
             <?php include 'newsChil.php' ?>
@@ -56,7 +57,7 @@
             <i class="fas fa-angle-up"></i>
         </a>
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Web Demo tin tức K12-KHMT</p></div>
+            <div class="container"><h5 class="m-0 text-center text-white">Web Demo tin tức K12-KHMT</h5></div>
         </footer>
     </div>
     <script src="assets/vendors/aos/dist/aos.js/aos.js"></script>
@@ -71,6 +72,42 @@
             $("html, body").animate({ scrollTop: 0 }, "slow");
             return false;
             });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="textyle.min.js"></script>
+		<script>
+			$(window).on('load',function(){
+				//simple use
+				$('.ex1').textyle();
+				$('.desc').textyle();
+				//you can select options or add callback
+				$('.ex2').textyle({
+                    duration : 400,
+                    delay : 100,
+                    easing : 'swing',
+                    callback : function(){
+                        $(this).css({
+                            color : 'coral',
+                            transition : '1s',
+                        });
+                        $('.desc').css('opacity',1);
+                    }
+                });
+			});
+		</script>
+	</body><script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
     </script>
 </body>
 </html>

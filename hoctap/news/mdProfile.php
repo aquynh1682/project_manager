@@ -12,52 +12,69 @@
                 </div>
                 <div class="modal-body">
                 <div class="container bootstrap snippets bootdey">
+                <?php echo isset($error['note']) ? $error['note'] : ''; ?>
+                <form action="managerUser.php"  method="post" enctype="multipart/form-data">
                     <div class="row">
                     <!-- left column -->
                     <div class="col-md-3">
+                <?php echo isset($error['image']) ? $error['image'] : ''; ?>
                         <div class="text-center">
-                        <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
-                        <h6>Upload a different photo...</h6>
+                        <!-- <img src="//placehold.it/100" class="avatar img-circle" alt="avatar"> -->
+                        <!-- <div class="status alert alert-success"></div> -->
                         
-                        <input type="file" class="form-control">
+                        <input type="file" class="form-control" name="fileToUpload" id="image" required=""/>
                         </div>
                     </div>
                     
                     <!-- edit form column -->
                     <div class="col-md-9 personal-info">
-                        <div class="alert alert-info alert-dismissable">
+                        <!-- <div class="alert alert-info alert-dismissable">
                         <a class="panel-close close" data-dismiss="alert">×</a> 
                         <i class="fa fa-coffee"></i>
                         This is an <strong>.alert</strong>. Use this to show important messages to the user.
-                        </div>
+                        </div> -->
                         <h3>Personal info</h3>
                         
-                        <form class="form-horizontal" role="form">
                         <div class="form-group">
+                            <?php echo isset($error['fullName']) ? $error['fullName'] : ''; ?>
                             <label class="col-lg-3 control-label">Họ tên</label>
                             <div class="col-lg-8">
-                            <input class="form-control" type="text" value="dey-dey">
+                            <input class="form-control" name="fullName" type="text" value="<?php echo $user['fullName']; ?>">
                             </div>
                         </div>
                         <div class="form-group">
+                            <?php echo isset($error['address']) ? $error['address'] : ''; ?>
                             <label class="col-lg-3 control-label">Địa chỉ</label>
                             <div class="col-lg-8">
-                            <input class="form-control" type="text" value="bootdey">
+                            <input class="form-control" name="address" type="text" value="<?php echo $user['address']; ?>">
                             </div>
                         </div>
                         <div class="form-group">
+                <?php echo isset($error['phone']) ? $error['phone'] : ''; ?>
                             <label class="col-lg-3 control-label">Điện thoại</label>
                             <div class="col-lg-8">
-                            <input class="form-control" type="text" value="">
+                            <input class="form-control" name="phone" type="text" value="<?php echo $user['phone']; ?>">
                             </div>
                         </div>
                         <div class="form-group">
+                <?php echo isset($error['email']) ? $error['email'] : ''; ?>
                             <label class="col-lg-3 control-label">Email:</label>
                             <div class="col-lg-8">
-                            <input class="form-control" type="text" value="janesemail@gmail.com">
+                            <input class="form-control" name="email" type="text" value="<?php echo $user['email']; ?>">
                             </div>
                         </div>
-                        
+                <?php echo isset($error['sex']) ? $error['sex'] : ''; ?>
+                        <div class="form-group form-check form-check-inline " style="margin-left:100px">
+                            <input class="form-check-input" type="radio" name="sex" id="inlineRadio1" value="Nam" checked>
+                            
+                            <label class="form-check-label" for="inlineRadio1" >Nam</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sex" id="inlineRadio2" value="Nữ">
+                            
+                            <label class="form-check-label" for="inlineRadio2">Nữ</label></label>
+                        </div>
+                        <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
                     </div>
                 </div>
                 </div>

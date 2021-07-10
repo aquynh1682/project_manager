@@ -12,7 +12,7 @@
 	$adminlib = new adminlib();
 	
 	if (isset($_POST["update_action"])) {
-		$message = $adminlib->add_post();
+		$message = $adminlib->update_user($user['id']);
 		$error = $message[0];
 		$data = $message[1];
 	}
@@ -152,11 +152,23 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $user['fullName'] ?></span>
+                                <?php if(isset($user['images'])){ ?>
+                                    <img class="img-profile rounded-circle"
+                                    src="./uploads/<?php echo $user['images'] ?>">
+                                    
+                                <?php }else{ ?>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
+                                <?php } ?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
+                                <?php if($user['access'] == 0){?>
+                                    <a class="dropdown-item" href="upNews.php">
+                                    <i class="fas fa-upload fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Đăng bài
+                                </a>
+                                <?php } ?>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout

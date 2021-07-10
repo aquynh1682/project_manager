@@ -40,8 +40,8 @@
                 <img class="card-img-top" src="images/<?php echo $data[0]['image'];?>" height="450px" width="800px" alt="Card image cap">
                 <div class="card-body">
                     <div class="small text-muted"><?php echo$data[0]['createdate']; ?></div>
-                    <h2 class="card-title"><?php echo $data[0]['title'];?></h2>
-                    <p class="card-text"><?php echo substr($data[0]['content'], 0, 200).'...';?></p>
+                    <h1 class="card-title"><?php echo $data[0]['title'];?></h1>
+                    <h6 class="card-text"><?php echo substr($data[0]['content'], 0, 200).'...';?></h6>
                     <a href="hotNews.php?id=<?php echo $data[0]['post_id']; ?>" class="btn btn-primary">Xem tin &rarr;</a>
                 </div>
             </div>
@@ -54,8 +54,8 @@
                                     <img class="card-img-top" src="images/<?php echo $data[$i]['image'];?>" height="220px" width="120px" alt="Card image cap">
                                     <div class="card-body">
                                         <div class="small text-muted"><?php echo$data[$i]['createdate']; ?></div>
-                                        <h2 class="card-title"><?php echo $data[$i]['title'];?></h2>
-                                        <p class="card-text"><?php echo substr($data[$i]['content'], 0, 100).'...';?></p>
+                                        <h1 class="card-title"><?php echo $data[$i]['title'];?></h1>
+                                        <h6 class="card-text"><?php echo substr($data[$i]['content'], 0, 100).'...';?></h6>
                                         <a href="hotNews.php?id=<?php echo $data[$i]['post_id']; ?>" class="btn btn-primary">Xem tin &rarr;</a>
                                     </div>
                                 </div>
@@ -67,15 +67,16 @@
                                 <img class="card-img-top" src="images/<?php echo $data[$i]['image'];?>" height="220px" width="120px" alt="Card image cap">
                                 <div class="card-body">
                                     <div class="small text-muted"><?php echo$data[$i]['createdate']; ?></div>
-                                    <h2 class="card-title"><?php echo $data[$i]['title'];?></h2>
-                                    <p class="card-text"><?php echo substr($data[$i]['content'], 0, 100).'...';?></p>
+                                    <h1 class="card-title"><?php echo $data[$i]['title'];?></h1>
+                                    <h6 class="card-text"><?php echo substr($data[$i]['content'], 0, 100).'...';?></h6>
                                     <a href="hotNews.php?id=<?php echo $data[$i]['post_id']; ?>" class="btn btn-primary">Xem tin &rarr;</a>
                                 </div>
                             </div>
                         <?php } ?>
                     </div>
             </div>
-        <ul class="pagination">
+            <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center pagination-sm">
                     <?php 
                     if ($current_page > 1 && $total_page > 1){
                         echo '<li class="page-item"><a class="page-link" href="news.php?'.$link.'page='.($current_page-1).'">Prev</a></li>';
@@ -95,10 +96,11 @@
                     
                     ?>
                 </ul>
+            </nav>
             <!-- Pagination-->
         </div>
         <!-- Side widgets-->
-        <div class="col-lg-4" id="slidebar">
+        <div class="col-lg-4 " >
             <!-- Search widget-->
             <div class="card mb-4" >
                 <div class="card-header">Tìm Kiếm</div>
@@ -110,7 +112,7 @@
                 </div>
             </div>
             <!-- Categories widget-->
-            <div class="card mb-4" >
+            <div class="card mb-4">
                 <div class="card-header">Tin cũ hơn</div>
                 <div class="card-body">
                     <div class="list-group">
