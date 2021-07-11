@@ -42,16 +42,12 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-
     <title>K12 News</title>
-
     <!-- Custom fonts for this template-->
     <link href="./css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -61,17 +57,12 @@
     <!-- Custom styles for this template-->
     <link href="./css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/21.png" />
-
 </head>
-
 <body id="page-top">
-
     <!-- Page Wrapper -->
     <div id="wrapper">
-
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="news.php">
                 <div class="sidebar-brand-icon rotate-n-15">
@@ -79,37 +70,25 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">K12 <sup>admin</sup></div>
             </a>
-
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Quản lý tài khoản</span></a>
             </li>
-
-            
-
             <hr class="sidebar-divider d-none d-md-block">
-
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
-
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
-
             <div id="content">
-
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
@@ -122,9 +101,7 @@
                             </div>
                         </div>
                     </form>
-
                     <ul class="navbar-nav ml-auto">
-
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -146,7 +123,6 @@
                                 </form>
                             </div>
                         </li>
-
 						<?php if(isset($user['fullName'])) { ?>
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -176,15 +152,12 @@
                             </div>
                         </li>
 						<?php }else{ ?>
-						
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
-							<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
-						</ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Đăng ký</a></li>
+                                <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+                            </ul>
 						<?php } ?>
-
                     </ul>
-
                 </nav>
                 <div class="container-fluid">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -200,14 +173,11 @@
                     </div>
                 </div>
             </footer>
-
         </div>
-
     </div>
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -226,23 +196,13 @@
             </div>
         </div>
     </div>
-
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 
     <script src="./js/jquery.easing.min.js"></script>
-
     <script src="./js/sb-admin-2.min.js"></script>
-
     <script src="./js/Chart.min.js"></script>
-
     <script src="./js/chart-area-demo.js"></script>
     <script src="./js/chart-pie-demo.js"></script>
-    <script>
-        function getImage(imagename){
-            var nweimg=imagename.replace(/^.*\\/,"");
-            $('#display-image').html(imagename);
-        }
-    </script>
 </body>
 </html>

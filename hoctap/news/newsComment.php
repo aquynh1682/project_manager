@@ -28,7 +28,7 @@
             url:'loadComment.php',
             type:'get',
             data:{
-                id:id,
+                id:id, 
             },
             success:function(data){
                 $('#comment').append(data);

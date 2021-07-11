@@ -36,14 +36,14 @@
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="tìm kiếm" id="txtSearch" onkeyup="showSearch(this.value)" />
+					<input type="text" class="form-control" placeholder="tìm kiếm" name="search" id="txtSearch" onkeyup="showSearch(this.value)" />
 					<div class="input-group-btn">
 						<button class="btn btn-primary" type="submit" id="btnSearch">
 							<span class="glyphicon glyphicon-search"></span>
 						</button>
 					</div>
 				</div>
-				<div id="liveSearch"></div>
+				<div id="liveSearch" name="liveSearch"></div>
 			</div>
 			<!-- kết thúc tìm kiếm -->
 			<div class="col-sm-2">
@@ -114,6 +114,7 @@
 	$('#btnSearch').click(function() {
 		let search = $('#txtSearch').val().trim();
 		readData(search);
+		$('#pagination').empty();
 		pagination(search);
 	});
 
@@ -279,7 +280,7 @@
 		});
 	}
 	$(document).ready(function(){
-		$(document).click(function(event){
+		$('div[name="liveSearch"]').click(function(event){
 			var search = event.target.id;
 			if(search == "liveSearch" || search == "" || search == "btnQuestion" || search == "pagination" || search == "btnClose"){
 				return;
@@ -292,10 +293,11 @@
 				// document.getElementById("txtSearch").innerHTML = text;
 				$('#txtSearch').val(text);
 				readData(text);
+				$('#txtSearch').val('');
 				$('#liveSearch').hide();
 			}
 		});
-		$(document).mouseover(function(event) {
+		$('div[name="liveSearch"]').mouseover(function(event) {
 			var search = event.target.id;
 			if(search == "liveSearch" || search == "" || search == "btnQuestion" || search == "pagination" || search == "btnSearch" || search == "txtSearch"){
 				return;
@@ -304,7 +306,7 @@
 				document.getElementById(search).style.color = "blue";
 			}
 		})
-		$(document).mouseout(function(event) {
+		$('div[name="liveSearch"]').mouseout(function(event) {
 			var search = event.target.id;
 			if(search == "liveSearch" || search == "" || search == "btnQuestion" || search == "pagination" || search == "btnSearch" || search == "txtSearch"){
 				return;

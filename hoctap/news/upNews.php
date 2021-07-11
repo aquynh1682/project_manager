@@ -172,19 +172,13 @@
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
-
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
-
             <div id="content">
-
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
@@ -197,9 +191,7 @@
                             </div>
                         </div>
                     </form>
-
                     <ul class="navbar-nav ml-auto">
-
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -221,8 +213,6 @@
                                 </form>
                             </div>
                         </li>
-
-						
 						<?php if(isset($user['fullName'])) { ?>
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -261,7 +251,7 @@
 
                 </nav>
                 <div class="container-fluid">
-				<?php echo isset($error['note']) ? $error['note'] : ''; ?>
+				<p style="color:red"><?php echo isset($error['note']) ? $error['note'] : ''; ?></p>
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800" id="manager">Quản lý bài viết</h1>
                     </div>

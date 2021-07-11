@@ -29,55 +29,55 @@
                         </div>
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Tài khoản</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><?php echo $user['user']; ?></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Họ tên</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><?php echo $user['fullName']; ?></p>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Giới tính</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><?php echo $user['sex']; ?></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Địa chỉ</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><?php echo $user['address']; ?></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Email</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><?php echo $user['email']; ?></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Điện thoại</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><?php echo $user['phone']; ?></p>
-                                            </div>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Tài khoản</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><?php echo $user['user']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Họ tên</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><?php echo $user['fullName']; ?></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Giới tính</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><?php echo $user['sex']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Địa chỉ</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><?php echo $user['address']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><?php echo $user['email']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Điện thoại</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><?php echo $user['phone']; ?></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

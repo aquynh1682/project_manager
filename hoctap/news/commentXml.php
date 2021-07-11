@@ -39,7 +39,6 @@
             $xml -> endElement();
         }
     $xml -> endElement();
-    // header('Content-type: text/xml');
     header("Content-Type: application/xml; charset=utf-8");
     $xml->flush();
 ?>

@@ -16,10 +16,10 @@
 				<form action="upNews.php"  method="post" enctype="multipart/form-data">
 
 					Tiêu đề: <?php echo isset($error['title']) ? $error['title'] : ''; ?><br>
-					<input type="text" id="title" name="title" value="<?php echo isset($error['title']) ? $error['title'] : ''; ?>" class="form-control"><br>
+					<input type="text" id="title" name="title" value="<?php echo isset($data['title']) ? $data['title'] : ''; ?>" class="form-control"><br>
 
 					Nội dung: <?php echo isset($error['content']) ? $error['content'] : ''; ?><br>
-					<textarea name="content" id="content"  rows="25" cols="93"><?php echo isset($error['title']) ? $error['title'] : ''; ?></textarea>
+					<textarea name="content" id="content"  rows="25" cols="93"><?php echo isset($data['title']) ? $data['title'] : ''; ?></textarea>
 					<script>
 						CKEDITOR.replace('content');
 					</script>
