@@ -169,33 +169,62 @@ body {
 
 /*--------------------------*/
 
-.main .left {
-    width: 25%;
-    /* border: 1px solid #333; */
-    border-radius: 5px;
-    background-color: #fff;
-    height: 540px;
-    padding: 10px;
+@media screen and (max-width:2000px) {
+    .main .left {
+        width: 25%;
+        /* border: 1px solid #333; */
+        border-radius: 5px;
+        background-color: #fff;
+        /* height: 540px; */
+        padding: 10px;
+    }
+    .main .center {
+        width: 50%;
+        border: 1px solid #333;
+        border-radius: 5px;
+        background-color: #fcf8e3;
+        /* height: 590px; */
+        padding: 10px;
+    }
+    .main .right {
+        margin-right: 0px;
+        width: 25%;
+        /* border: 1px solid #333; */
+        border-radius: 5px;
+        background-color: #fff;
+        /* height: 540px; */
+        padding: 10px;
+        float: right;
+    }
 }
 
-.main .center {
-    width: 50%;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #fcf8e3;
-    /* height: 590px; */
-    padding: 10px;
-}
-
-.main .right {
-    margin-right: 0px;
-    width: 25%;
-    /* border: 1px solid #333; */
-    border-radius: 5px;
-    background-color: #fff;
-    height: 540px;
-    padding: 10px;
-    float: right;
+@media screen and (max-width:800px) {
+    .main .left {
+        width: 0%;
+        /* border: 1px solid #333; */
+        border-radius: 5px;
+        background-color: #fff;
+        /* height: 540px; */
+        padding: 10px;
+    }
+    .main .center {
+        width: 100%;
+        border: 1px solid #333;
+        border-radius: 5px;
+        background-color: #fcf8e3;
+        /* height: 590px; */
+        padding: 10px;
+    }
+    .main .right {
+        margin-right: 0px;
+        width: 0%;
+        /* border: 1px solid #333; */
+        border-radius: 5px;
+        background-color: #fff;
+        /* height: 540px; */
+        padding: 10px;
+        float: right;
+    }
 }
 
 .main .right h3 {
@@ -304,17 +333,6 @@ body {
     display: block;
     line-height: 80px;
 }
-
-
-/* #footer .container h2 {
-    margin-left: 60px;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 800px;
-    color: #f0f9fd;
-    display: block;
-    line-height: 80px;
-} */
 
 @media screen and (max-width:2000px) {
     #footer .container h2 {

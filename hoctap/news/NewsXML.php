@@ -6,7 +6,7 @@
     $xml -> openURI("php://output");
     $xml -> startDocument('1.0', 'UTF-8');
     $xml -> endDocument();
-    $xml -> setIndent(true);
+    $xml -> setIndent(1);
     $xml ->startElement('rss');
     $xml ->writeAttribute('version', '2.0');
     $xml ->writeAttribute('xmlns:atom', 'http://www.w3.org/2005/Atom');
@@ -23,7 +23,7 @@
                 $xml -> writeRaw($row['title']);
                 $xml -> endElement();
                 $xml -> startElement('content');
-                $xml -> writeRaw($a);
+                $xml -> writeCdata($row['content']);
                 $xml -> endElement();
                 $xml -> startElement('image');
                 $xml -> writeRaw($row['image']);

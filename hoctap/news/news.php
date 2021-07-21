@@ -95,6 +95,26 @@
                 });
 			});
 		</script>
+        <script> 
+        $('#Timkiem').on('keyup', function () {
+            var timKiem = $(this).val();
+            if(timKiem == ""){
+                $("#add").empty();
+            }else{
+                $.ajax({
+                url:'search.php',
+                type:'get',
+                data:{
+                    search:timKiem,
+                },
+                success: function(data){
+                    $('#add').html(data);
+                }
+                
+                })
+            }
+        })
+        </script>
 	</body><script type="text/javascript">
 
     var _gaq = _gaq || [];

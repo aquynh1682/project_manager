@@ -77,7 +77,7 @@
 
                         <li> <a href="./news/news.php">TIN TỨC</a> </li>
                         <li> <a href="QA.php">Q&A</a> </li>
-                        <li> <a href="help.html">HƯỚNG DẪN</a> </li>
+                        <li> <a href="help.php">HƯỚNG DẪN</a> </li>
 
                         <!-- <div class="form-search" style="margin-top: 5px;">
                             <input class="td-widget-search-input" placeholder="Nhập từ khóa để tìm kiếm..." type="text"

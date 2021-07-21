@@ -2,5 +2,5 @@
 $dbserver = "localhost";
 $username = "root";
 $password = "";
-$database = "k12-khmt";
+$database = "olirenwm_htht";
 ?>
