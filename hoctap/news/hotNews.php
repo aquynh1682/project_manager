@@ -56,6 +56,10 @@
         #session{
             display: none;
         }
+        h2 {
+            color: black;
+            font-size: 20px;
+        }
     </style>
 
     <!-- endinject -->
@@ -72,9 +76,9 @@
         <div class="row">
                 <div class="col">
                 </div>
-                <div class="col-md-auto">
+                <div id='news' class="col-md-auto">
                     <h2 id="title"></h2>
-                    <h4 id = "content"></h4>
+                    <h4 id="content"></h4>
                 </div>
                 <div class="col">
                 </div>
@@ -98,28 +102,48 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/sb-admin-2.min.js"></script>
     <script>
-        window.load = load();
-        function load(){
+        // window.load = load();
+        // function load(){
+        //     
+        //     $.ajax({
+        //         url:'load.php',
+        //         type:'post',
+        //         data:{
+        //             id:id,
+        //         },
+        //         success: function(data){
+        //             var q = jQuery.parseJSON(data);
+        //             $('#category').append(q['name']);
+        //             $('#date').append(q['createdate']);
+        //             $('#title').append(q['title']);
+        //             $('#content').append(q['content']);
+        //         }
+        //     })
+        // }
+        $(document).ready(function(){
+            load();
+        })
+        function load() {
             let id = '<?php echo $_GET['id'] ?>';
+            $('#news').children().remove();
             $.ajax({
-                url:'load.php',
-                type:'post',
-                data:{
-                    id:id,
-                },
+                url:'news.xml',
+                dataType: 'xml',
                 success: function(data){
-                    var q = jQuery.parseJSON(data);
-                    $('#category').append(q['name']);
-                    $('#date').append(q['createdate']);
-                    $('#titel').append(q['title']);
-                    $('#content').append(q['content']);
+                    $(data).find('new').each(function(){
+                        if(id == $(this).find("post_id").text()){
+                            var info ='<h1>' + $(this).find("title").text() + '</h1>' + '<hr />' + '<h4>' + $(this).find("content").text() + '</h4>';
+                            $('#news').append(info);
+                        }
+                    // console.log(info);
+                    })
                 }
             })
         }
         $("a[href='#page-top']").click(function() {
             $("html, body").animate({ scrollTop: 0 }, "slow");
             return false;
-            });
+        });
     </script>
 </body>
 </html>

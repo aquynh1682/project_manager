@@ -3,7 +3,7 @@
     mysqli_set_charset($conn, 'utf8');
     $fire = mysqli_query($conn, "select * from posts");
     $xml = new XMLWriter();
-    $xml -> openURI("php://output");
+    $xml -> openURI("news.xml");
     $xml -> startDocument('1.0', 'UTF-8');
     $xml -> endDocument();
     $xml -> setIndent(1);

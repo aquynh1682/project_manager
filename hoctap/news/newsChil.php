@@ -40,8 +40,8 @@
                 <img class="card-img-top" src="images/<?php echo $data[0]['image'];?>" height="450px" width="800px" alt="Card image cap">
                 <div class="card-body">
                     <div class="small text-muted"><?php echo$data[0]['createdate']; ?></div>
-                    <h1 class="card-title"><?php echo $data[0]['title'];?></h1>
-                    <h6 class="card-text"><?php echo substr($data[0]['content'], 0, 200).'...';?></h6>
+                    <h3 class="card-title"><?php echo $data[0]['title'];?></h3>
+                    <div class="card-text"><?php echo substr($data[0]['content'], 0, 200).'...';?></div>
                     <a href="hotNews.php?id=<?php echo $data[0]['post_id']; ?>" class="btn btn-primary">Xem tin &rarr;</a>
                 </div>
             </div>
@@ -54,8 +54,8 @@
                                     <img class="card-img-top" src="images/<?php echo $data[$i]['image'];?>" height="220px" width="120px" alt="Card image cap">
                                     <div class="card-body">
                                         <div class="small text-muted"><?php echo$data[$i]['createdate']; ?></div>
-                                        <h1 class="card-title"><?php echo $data[$i]['title'];?></h1>
-                                        <h6 class="card-text"><?php echo substr($data[$i]['content'], 0, 100).'...';?></h6>
+                                        <h3 class="card-title"><?php echo $data[$i]['title'];?></h3>
+                                        <div class="card-text"><?php echo substr($data[$i]['content'], 0, 100).'...';?></div>
                                         <a href="hotNews.php?id=<?php echo $data[$i]['post_id']; ?>" class="btn btn-primary">Xem tin &rarr;</a>
                                     </div>
                                 </div>
@@ -67,8 +67,8 @@
                                 <img class="card-img-top" src="images/<?php echo $data[$i]['image'];?>" height="220px" width="120px" alt="Card image cap">
                                 <div class="card-body">
                                     <div class="small text-muted"><?php echo$data[$i]['createdate']; ?></div>
-                                    <h1 class="card-title"><?php echo $data[$i]['title'];?></h1>
-                                    <h6 class="card-text"><?php echo substr($data[$i]['content'], 0, 100).'...';?></h6>
+                                    <h3 class="card-title"><?php echo $data[$i]['title'];?></h3>
+                                    <div class="card-text"><?php echo substr($data[$i]['content'], 0, 100).'...';?></div>
                                     <a href="hotNews.php?id=<?php echo $data[$i]['post_id']; ?>" class="btn btn-primary">Xem tin &rarr;</a>
                                 </div>
                             </div>

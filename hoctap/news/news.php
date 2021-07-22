@@ -38,6 +38,18 @@
     <link rel="stylesheet" href="animation.css"/>
     <!-- endinject -->
     <title>K12News</title>
+    <style>
+        h2 {
+            /* font-weight: bold; */
+            color: black;
+            font-size: 15px;
+        }
+        h3 {
+            font-weight: bold;
+            color: black;
+            font-size: 32px;
+        }
+    </style>
 </head>
 <body>
     <div class="container-scroller">
@@ -92,6 +104,9 @@
                         });
                         $('.desc').css('opacity',1);
                     }
+                });
+                
+                $.ajax("NewsXML.php", function(){
                 });
 			});
 		</script>
